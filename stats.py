@@ -11,4 +11,5 @@ def get_num_chars(file_content):
             char_count[char] += 1
         else:
             char_count[char] = 1
-    return char_count
+    char_dict = sorted(char_count.items(), key = lambda x : x[1], reverse = True)
+    return char_dict
